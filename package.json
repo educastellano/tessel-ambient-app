@@ -1,0 +1,49 @@
+{
+  "name": "tessel-ambient-app",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "raistlin start app/dom.js --hot -- -t stylusify -t imgurify",
+    "build": "raistlin build app/dom.js --out build/app.js -- -t stylusify -t imgurify",
+    "bundle": "raistlin bundle build/app.js --out dist/app.js -- -t stylusify -t imgurify",
+    "deploy": "cp -R dist/* ../tessel-ambient/app/"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nanoxhr": "^1.0.2",
+    "object.assign": "^4.0.3",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "tiny-react-router": "^1.0.2",
+    "xhr": "^2.0.4"
+  },
+  "devDependencies": {
+    "babel": "^5.0.12",
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "browserify-hmr": "^0.3.1",
+    "concurrently": "^2.0.0",
+    "cssnano": "^1.0.1",
+    "deploy-versioning": "^1.0.2",
+    "imgurify": "^1.1.0",
+    "livereloadify": "^2.0.0",
+    "mocha": "^2.2.4",
+    "mocha-imguri-compiler": "^1.1.1",
+    "mocha-stylus-compiler": "^1.0.1",
+    "raistlin": "^2.0.3",
+    "resolvify": "^1.0.2",
+    "stylus": "^0.50.0",
+    "stylusify": "^2.0.0",
+    "testdom": "^1.0.1",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.1.1"
+  }
+}
